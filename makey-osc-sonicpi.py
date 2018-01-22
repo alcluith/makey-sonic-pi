@@ -1,8 +1,7 @@
-###########################################################################
-# Pygame Zero program allowing MaKey MaKey to trigger sounds in Sonic Pi
-# Claire Quigley, January 2018
-###########################################################################
-
+#####################################################
+#Use MaKey MaKey to trigger sounds in Sonic Pi
+#written by Claire Quigley, January 2018
+#####################################################
 from random import randint
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
@@ -11,12 +10,8 @@ from pythonosc import udp_client
 # set size of Pygame Zero window
 WIDTH = 800
 HEIGHT = 600
-middle_x = WIDTH / 2
-middle_y = HEIGHT / 2
 
-# where to send the OSC messages (assuming Sonic Pi is
-# running on the same machine as Pygame Zero).  Sonic Pi
-# listens for OSC messages on Port 4559
+# where to send the OSC messages 
 sender = udp_client.SimpleUDPClient("127.0.0.1", 4559)
 
 # screen colors
